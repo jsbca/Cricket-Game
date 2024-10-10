@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cricket Game</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+            margin-top: 50px;
+            border: 5px solid black;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            border: 2px solid rgb(62, 55, 55);
+        }
+
+        .btn-custom {
+            width: 150px;
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button class="btn btn-primary btn-custom" onclick="
+    const userChoiceMsg = '';
+    let randomNumber = Math.random() * 3 ;
+    let computerChoice;
+    if(randomNumber > 0 && randomNumber <= 1){
+        computerChoice = 'Bat';
+    }else if(randomNumber > 1 && randomNumber <= 2){
+         computerChoice = 'Ball';
+    }else {
+         computerChoice = 'Stump';
+    }
+    let resultMsg;
+    if(computerChoice === 'Ball'){
+        resultMsg = 'User Won';
+    }else if(computerChoice === 'Bat'){
+        resultMsg =`It's a tie`;
+    } else if(computerChoice === 'Stump'){
+        resultMsg ='Computer has won';
+    }
+    alert(`User has chosen Bat. And Computer choice ${computerChoice} and ${resultMsg} `)
+    ">Bat</button>
+
+
+
+
+
+  <button class="btn btn-secondary btn-custom" onclick="
+      userChoiceMsg = '';
+     randomNumber = Math.random() * 3 ;
+    if(randomNumber > 0 && randomNumber <= 1){
+        computerChoice = 'Bat';
+    }else if(randomNumber > 1 && randomNumber <= 2){
+         computerChoice = 'Ball';
+    }else {
+         computerChoice = 'Stump';
+    }
+    if(computerChoice === 'Ball'){
+        resultMsg =`It's a tie`;
+    }else if(computerChoice === 'Bat'){
+        resultMsg =`Computer has won`;
+    } else if(computerChoice === 'Stump'){
+        resultMsg ='User Won';
+    }
+    alert(`User has chosen Ball. And Computer choice ${computerChoice} and ${resultMsg} `)
+    ">Ball</button>
+
+
+
+    <button class="btn btn-success btn-custom" onclick="
+    userChoiceMsg = '';
+   randomNumber = Math.random() * 3 ;
+  if(randomNumber > 0 && randomNumber <= 1){
+      computerChoice = 'Bat';
+  }else if(randomNumber > 1 && randomNumber <= 2){
+       computerChoice = 'Ball';
+  }else {
+       computerChoice = 'Stump';
+  }
+  if(computerChoice === 'Ball'){
+      resultMsg =`Computer has  Won `;
+  }else if(computerChoice === 'Bat'){
+      resultMsg =`user won`;
+  } else if(computerChoice === 'Stump'){
+      resultMsg =`It's a tie`;
+  }
+  alert(`User has chosen Stump. And Computer choice ${computerChoice} and ${resultMsg} `)
+  ">Stump</button>
+
+</body>
+
+</html>
